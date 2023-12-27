@@ -6,10 +6,10 @@ import {
   FaGithub,
   FaLinkedin,
   FaFacebook,
-  FaLinkedinIn,
 } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -25,11 +25,36 @@ const NavBar = () => {
 
       {/* MENU */}
       <ul className="hidden md:flex">
-        <li>HOME</li>
-        <li>ABOUT</li>
-        <li>SKILLS</li>
-        <li>WORK</li>
-        <li>CONTACT</li>
+        <li>
+          <Link to="home" smooth={true} duration={500}>
+            HOME
+          </Link>
+        </li>
+        <li>
+          <Link to="about" smooth={true} duration={500}>
+            ABOUT
+          </Link>
+        </li>
+        <li>
+          <Link to="skills" smooth={true} duration={500}>
+            SKILLS
+          </Link>
+        </li>
+        <li>
+          <Link to="projects" smooth={true} duration={500}>
+            PROJECTS
+          </Link>
+        </li>
+        <li>
+          <Link to="onGoingProject" smooth={true} duration={500}>
+            ON-GOING
+          </Link>
+        </li>
+        <li>
+          <Link to="contact" smooth={true} duration={500}>
+            CONTACT
+          </Link>
+        </li>
       </ul>
 
       {/* HAMBURGER MENU */}
@@ -45,11 +70,46 @@ const NavBar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0A192F] flex flex-col justify-center items-center"
         }
       >
-        <li className="py-6 text-4xl">HOME</li>
-        <li className="py-6 text-4xl">ABOUT</li>
-        <li className="py-6 text-4xl">SKILLS</li>
-        <li className="py-6 text-4xl">WORK</li>
-        <li className="py-6 text-4xl">CONTACT</li>
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="home" smooth={true} duration={500}>
+            HOME
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="about" smooth={true} duration={500}>
+            ABOUT
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
+            SKILLS
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link
+            onClick={handleClick}
+            to="projects"
+            smooth={true}
+            duration={500}
+          >
+            PROJECTS
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link
+            onClick={handleClick}
+            to="onGoingProject"
+            smooth={true}
+            duration={500}
+          >
+            ON-GOING
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
+            CONTACT
+          </Link>
+        </li>
       </ul>
 
       {/* SOCIAL ICONS */}
@@ -58,7 +118,7 @@ const NavBar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href="https://www.linkedin.com/in/hazzaz-durjoy/"
             >
               Linkedin <FaLinkedin size={30} />
             </a>
@@ -66,7 +126,7 @@ const NavBar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href="https://github.com/sm-hdurjoy"
             >
               GitHub <FaGithub size={30} />
             </a>
@@ -74,15 +134,15 @@ const NavBar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6FC2B0]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href="https://www.facebook.com/durjoy.hazzaz"
             >
-              Email <HiOutlineMail size={30} />
+              Facebook <FaFacebook size={30} />
             </a>
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565F69]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href="https://drive.google.com/file/d/1iahRv_kCuQrhxBxsOonU0Tj5M8lzkTEY/view?usp=sharing"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>

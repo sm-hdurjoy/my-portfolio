@@ -1,4 +1,4 @@
-# [Hazzaz Durjoy Portfolio]
+# Hazzaz Durjoy Portfolio
 
 Welcome to my portfolio! This repository showcases my work, projects, and achievements. Feel free to explore and get to know me better.
 
@@ -50,3 +50,4 @@ If you'd like to run this portfolio locally, follow the steps below:
 1. **Clone the Repository:**
    ```bash
    git clone [repository-url]
+   ```
